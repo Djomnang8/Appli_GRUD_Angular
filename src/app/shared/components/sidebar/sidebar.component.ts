@@ -8,13 +8,19 @@ import { AuthService } from '../../../core/services/auth.service';
   selector: 'app-sidebar',
   standalone: true,
   imports: [
-    CommonModule,       // *ngIf
-    RouterModule,       // routerLink, routerLinkActive
-    TranslateModule     // | translate
+    CommonModule,
+    RouterModule,
+    TranslateModule
   ],
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
+  isCollapsed = false; // État initial
+
   constructor(public auth: AuthService) {}
+
+  toggleSidebar() {
+    this.isCollapsed = !this.isCollapsed;
+  }
 }

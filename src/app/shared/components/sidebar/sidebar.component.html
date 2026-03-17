@@ -1,17 +1,30 @@
-<nav class="sidebar">
+<nav class="sidebar" [class.collapsed]="isCollapsed">
+  <button class="toggle-btn" (click)="toggleSidebar()">
+    {{ isCollapsed ? '→' : '←' }}
+  </button>
+
   <a routerLink="/admin" routerLinkActive="active" class="nav-item" *ngIf="auth.isAdmin()">
-    🏠 {{ 'SIDEBAR.DASHBOARD' | translate }}
+    <span class="icon">🏠</span>
+    <span class="label">{{ 'SIDEBAR.DASHBOARD' | translate }}</span>
   </a>
+  
   <a routerLink="/employe-dashboard" routerLinkActive="active" class="nav-item" *ngIf="!auth.isAdmin()">
-    🏠 {{ 'SIDEBAR.DASHBOARD' | translate }}
+    <span class="icon">🏠</span>
+    <span class="label">{{ 'SIDEBAR.DASHBOARD' | translate }}</span>
   </a>
+
   <a routerLink="/employees" routerLinkActive="active" class="nav-item">
-    👥 {{ 'SIDEBAR.EMPLOYEES' | translate }}
+    <span class="icon">👥</span>
+    <span class="label">{{ 'SIDEBAR.EMPLOYEES' | translate }}</span>
   </a>
+
   <a routerLink="/products" routerLinkActive="active" class="nav-item" *ngIf="auth.isAdmin()">
-    📦 Produits
+    <span class="icon">📦</span>
+    <span class="label">Produits</span>
   </a>
+
   <a routerLink="/departments" routerLinkActive="active" class="nav-item" *ngIf="auth.isAdmin()">
-    🏢 Départements
+    <span class="icon">🏢</span>
+    <span class="label">Départements</span>
   </a>
 </nav>
