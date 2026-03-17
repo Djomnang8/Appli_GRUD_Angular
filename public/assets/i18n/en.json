@@ -1,0 +1,137 @@
+{
+  "APP": {
+    "TITLE": "Employee Management"
+  },
+  "LOGIN": {
+    "SUBTITLE": "Sign in to your account",
+    "USERNAME": "Username",
+    "PASSWORD": "Password",
+    "SUBMIT": "Sign in",
+    "ERROR": "Invalid credentials, please try again."
+  },
+  "NAV": {
+    "LOGOUT": "Sign out"
+  },
+  "DASHBOARD": {
+    "WELCOME": "Welcome",
+    "SUBTITLE": "Administrator dashboard",
+    "TOTAL": "Total employees",
+    "TOTAL_EMPLOYEES": "Total employees",
+    "ACTIVE": "Active employees",
+    "INACTIVE": "Inactive employees",
+    "DEPARTMENTS": "Number of departments"
+  },
+  "SIDEBAR": {
+    "DASHBOARD": "Dashboard",
+    "EMPLOYEES": "Employee list",
+    "MY_PROFILE": "My profile",
+    "LOGOUT": "Sign out",
+    "PRODUCTS": "Products",
+    "DEPARTMENTS": "Departments"
+  },
+  "NAVBAR": {
+    "LOGOUT": "Sign out",
+    "LANGUAGE": "Language"
+  },
+  "EMPLOYEE": {
+    "LIST_TITLE": "Employee list",
+    "RESULTS": "result(s) found",
+    "SEARCH": "Search for an employee...",
+    "ADD": "Add an employee",
+    "EDIT": "Edit employee",
+    "NAME": "Full name",
+    "LASTNAME": "Last name",
+    "FIRSTNAME": "First name",
+    "EMAIL": "Email address",
+    "PHONE": "Phone number",
+    "POST": "Job title",
+    "DEPT": "Department",
+    "HIRE_DATE": "Hire date",
+    "SALARY": "Monthly salary",
+    "STATUS": "Status",
+    "ACTIONS": "Available actions",
+    "ACTIVE": "Active",
+    "INACTIVE": "Inactive",
+    "NO_DATA": "No employees found."
+  },
+  "FORM": {
+    "SELECT": "Select an option",
+    "CANCEL": "Cancel",
+    "CREATE": "Create employee",
+    "UPDATE": "Update"
+  },
+  "PRODUCT": {
+    "TITLE": "Product Management",
+    "SUBTITLE": "Manage your product catalog",
+    "ADD": "+ New product",
+    "TOTAL": "Total products",
+    "LOW_STOCK": "Stock < 5",
+    "TOTAL_QUANTITY": "Total quantity",
+    "AVG_PRICE": "Average price",
+    "SEARCH": "Search for a product...",
+    "EDIT": "Edit product",
+    "NEW": "New product",
+    "NAME": "Name",
+    "NAME_REQUIRED": "Name is required",
+    "PRICE": "Price",
+    "CATEGORY": "Category",
+    "QUANTITY": "Quantity",
+    "SAVE": "Save",
+    "ID": "ID",
+    "ACTIONS": "Actions",
+    "EDIT_BTN": "Edit",
+    "DELETE": "Delete",
+    "CONFIRM_DELETE": "Delete this product?",
+    "DUPLICATE_ERROR": "A product with this name already exists",
+    "NO_DATA": "No products found",
+    "LOW_STOCK_ALERT_TITLE": "⚠️ Low stock products (< 5 units)",
+    "NO_LOW_STOCK": "✅ No products below threshold.",
+    "INVENTORY": "Inventory",
+    "MONTHLY_INVENTORY": "📊 Monthly inventory",
+    "PRODUCT": "Product",
+    "ALL_PRODUCTS": "All products",
+    "UNIT": "unit(s)"
+  },
+  "DEPARTMENT": {
+    "TITLE": "Department Management",
+    "SUBTITLE": "Manage your organization's departments",
+    "ADD": "+ New department",
+    "TOTAL": "Total departments",
+    "ACTIVE": "Active",
+    "INACTIVE": "Inactive",
+    "SEARCH": "Search for a department...",
+    "EDIT": "Edit department",
+    "NEW": "New department",
+    "NAME": "Name",
+    "NAME_REQUIRED": "Name is required",
+    "DESCRIPTION": "Description",
+    "ACTIVE_LABEL": "Active",
+    "SAVE": "Save",
+    "ID": "ID",
+    "STATUS": "Status",
+    "ACTIONS": "Actions",
+    "EDIT_BTN": "Edit",
+    "DELETE": "Delete",
+    "CONFIRM_DELETE": "Delete this department?",
+    "DUPLICATE_ERROR": "A department with this name already exists",
+    "NO_DATA": "No departments found"
+  },
+  "COMMON": {
+    "CLOSE": "Close",
+    "YEAR": "Year"
+  },
+  "MONTH": {
+    "JAN": "Jan",
+    "FEB": "Feb",
+    "MAR": "Mar",
+    "APR": "Apr",
+    "MAY": "May",
+    "JUN": "Jun",
+    "JUL": "Jul",
+    "AUG": "Aug",
+    "SEP": "Sep",
+    "OCT": "Oct",
+    "NOV": "Nov",
+    "DEC": "Dec"
+  }
+}

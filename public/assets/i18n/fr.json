@@ -1,0 +1,137 @@
+{
+  "APP": {
+    "TITLE": "Gestion des Employés"
+  },
+  "LOGIN": {
+    "SUBTITLE": "Connectez-vous à votre espace",
+    "USERNAME": "Nom d'utilisateur",
+    "PASSWORD": "Mot de passe",
+    "SUBMIT": "Se connecter",
+    "ERROR": "Identifiants incorrects, veuillez réessayer."
+  },
+  "NAV": {
+    "LOGOUT": "Se déconnecter"
+  },
+  "DASHBOARD": {
+    "WELCOME": "Bienvenue",
+    "SUBTITLE": "Tableau de bord administrateur",
+    "TOTAL": "Total des employés",
+    "TOTAL_EMPLOYEES": "Total des employés",
+    "ACTIVE": "Employés actifs",
+    "INACTIVE": "Employés inactifs",
+    "DEPARTMENTS": "Nombre de départements"
+  },
+  "SIDEBAR": {
+    "DASHBOARD": "Tableau de bord",
+    "EMPLOYEES": "Liste des employés",
+    "MY_PROFILE": "Mon profil",
+    "LOGOUT": "Se déconnecter",
+    "PRODUCTS": "Produits",
+    "DEPARTMENTS": "Départements"
+  },
+  "NAVBAR": {
+    "LOGOUT": "Se déconnecter",
+    "LANGUAGE": "Langue"
+  },
+  "EMPLOYEE": {
+    "LIST_TITLE": "Liste des employés",
+    "RESULTS": "résultat(s) trouvé(s)",
+    "SEARCH": "Rechercher un employé...",
+    "ADD": "Ajouter un employé",
+    "EDIT": "Modifier l'employé",
+    "NAME": "Nom complet",
+    "LASTNAME": "Nom de famille",
+    "FIRSTNAME": "Prénom",
+    "EMAIL": "Adresse email",
+    "PHONE": "Numéro de téléphone",
+    "POST": "Poste occupé",
+    "DEPT": "Département",
+    "HIRE_DATE": "Date d'embauche",
+    "SALARY": "Salaire mensuel",
+    "STATUS": "Statut",
+    "ACTIONS": "Actions disponibles",
+    "ACTIVE": "Actif",
+    "INACTIVE": "Inactif",
+    "NO_DATA": "Aucun employé trouvé."
+  },
+  "FORM": {
+    "SELECT": "Sélectionner une option",
+    "CANCEL": "Annuler",
+    "CREATE": "Créer l'employé",
+    "UPDATE": "Mettre à jour"
+  },
+  "PRODUCT": {
+    "TITLE": "Gestion des produits",
+    "SUBTITLE": "Gérez votre catalogue de produits",
+    "ADD": "+ Nouveau produit",
+    "TOTAL": "Total produits",
+    "LOW_STOCK": "Stock < 5",
+    "TOTAL_QUANTITY": "Quantité totale",
+    "AVG_PRICE": "Prix moyen",
+    "SEARCH": "Rechercher un produit...",
+    "EDIT": "Modifier le produit",
+    "NEW": "Nouveau produit",
+    "NAME": "Nom",
+    "NAME_REQUIRED": "Le nom est requis",
+    "PRICE": "Prix",
+    "CATEGORY": "Catégorie",
+    "QUANTITY": "Quantité",
+    "SAVE": "Enregistrer",
+    "ID": "ID",
+    "ACTIONS": "Actions",
+    "EDIT_BTN": "Modifier",
+    "DELETE": "Supprimer",
+    "CONFIRM_DELETE": "Supprimer ce produit ?",
+    "DUPLICATE_ERROR": "Un produit avec ce nom existe déjà",
+    "NO_DATA": "Aucun produit trouvé",
+    "LOW_STOCK_ALERT_TITLE": "⚠️ Produits en stock faible (< 5 unités)",
+    "NO_LOW_STOCK": "✅ Aucun produit en dessous du seuil.",
+    "INVENTORY": "Inventaire",
+    "MONTHLY_INVENTORY": "📊 Inventaire mensuel",
+    "PRODUCT": "Produit",
+    "ALL_PRODUCTS": "Tous les produits",
+    "UNIT": "unité(s)"
+  },
+  "DEPARTMENT": {
+    "TITLE": "Gestion des départements",
+    "SUBTITLE": "Gérez les départements de votre organisation",
+    "ADD": "+ Nouveau département",
+    "TOTAL": "Total départements",
+    "ACTIVE": "Actifs",
+    "INACTIVE": "Inactifs",
+    "SEARCH": "Rechercher un département...",
+    "EDIT": "Modifier le département",
+    "NEW": "Nouveau département",
+    "NAME": "Nom",
+    "NAME_REQUIRED": "Le nom est requis",
+    "DESCRIPTION": "Description",
+    "ACTIVE_LABEL": "Actif",
+    "SAVE": "Enregistrer",
+    "ID": "ID",
+    "STATUS": "Statut",
+    "ACTIONS": "Actions",
+    "EDIT_BTN": "Modifier",
+    "DELETE": "Supprimer",
+    "CONFIRM_DELETE": "Supprimer ce département ?",
+    "DUPLICATE_ERROR": "Un département avec ce nom existe déjà",
+    "NO_DATA": "Aucun département trouvé"
+  },
+  "COMMON": {
+    "CLOSE": "Fermer",
+    "YEAR": "Année"
+  },
+  "MONTH": {
+    "JAN": "Jan",
+    "FEB": "Fév",
+    "MAR": "Mar",
+    "APR": "Avr",
+    "MAY": "Mai",
+    "JUN": "Juin",
+    "JUL": "Juil",
+    "AUG": "Août",
+    "SEP": "Sep",
+    "OCT": "Oct",
+    "NOV": "Nov",
+    "DEC": "Déc"
+  }
+}

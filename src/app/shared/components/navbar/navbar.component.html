@@ -1,0 +1,23 @@
+<nav class="navbar">
+  <div class="nav-brand">
+    <span class="brand-text">{{ 'APP.TITLE' | translate }}</span>
+  </div>
+  <div class="nav-right">
+    <div class="lang-selector">
+      <button class="lang-toggle" (click)="showLangMenu=!showLangMenu">
+        Langue: {{translateConfig.getCurrentLang().toUpperCase()}}
+      </button>
+      <div class="lang-dropdown" *ngIf="showLangMenu">
+        <button *ngFor="let l of langs" (click)="setLang(l.code)"
+          [class.active]="translateConfig.getCurrentLang()===l.code" class="lang-item">
+          {{l.label}}
+        </button>
+      </div>
+    </div>
+    <span class="user-badge" [class.admin]="auth.isAdmin()">
+      {{ auth.isAdmin() ? 'Admin' : 'Employe' }}
+    </span>
+    <span class="user-name">{{auth.getCurrentUser()?.prenom}}</span>
+    <button class="btn-logout" (click)="logout()">{{ 'NAV.LOGOUT' | translate }}</button>
+  </div>
+</nav>

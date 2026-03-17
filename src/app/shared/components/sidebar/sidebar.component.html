@@ -1,0 +1,17 @@
+<nav class="sidebar">
+  <a routerLink="/admin" routerLinkActive="active" class="nav-item" *ngIf="auth.isAdmin()">
+    🏠 {{ 'SIDEBAR.DASHBOARD' | translate }}
+  </a>
+  <a routerLink="/employe-dashboard" routerLinkActive="active" class="nav-item" *ngIf="!auth.isAdmin()">
+    🏠 {{ 'SIDEBAR.DASHBOARD' | translate }}
+  </a>
+  <a routerLink="/employees" routerLinkActive="active" class="nav-item">
+    👥 {{ 'SIDEBAR.EMPLOYEES' | translate }}
+  </a>
+  <a routerLink="/products" routerLinkActive="active" class="nav-item" *ngIf="auth.isAdmin()">
+    📦 Produits
+  </a>
+  <a routerLink="/departments" routerLinkActive="active" class="nav-item" *ngIf="auth.isAdmin()">
+    🏢 Départements
+  </a>
+</nav>

@@ -1,0 +1,121 @@
+<div class="layout">
+  <app-navbar></app-navbar>
+  <div class="content-wrap">
+    <app-sidebar></app-sidebar>
+    <main class="main">
+
+      <!-- En-tête -->
+      <div class="page-header">
+        <div>
+          <h2>{{ 'PRODUCT.TITLE' | translate }}</h2>
+          <p>{{ 'PRODUCT.SUBTITLE' | translate }}</p>
+        </div>
+        <button class="btn-add" (click)="toggleForm()" *ngIf="!showForm">
+          {{ 'PRODUCT.ADD' | translate }}
+        </button>
+      </div>
+
+      <!-- Stats mini-dashboard -->
+      <div class="stats-grid" *ngIf="!showForm">
+        <div class="stat-card total">
+          <span class="stat-value">{{totalProducts}}</span>
+          <span class="stat-label">{{ 'PRODUCT.TOTAL' | translate }}</span>
+        </div>
+        <div class="stat-card stock-alert">
+          <span class="stat-value">{{lowStockCount}}</span>
+          <span class="stat-label">{{ 'PRODUCT.LOW_STOCK' | translate }}</span>
+        </div>
+        <div class="stat-card inventory">
+          <span class="stat-value">{{totalQuantity}}</span>
+          <span class="stat-label">{{ 'PRODUCT.TOTAL_QUANTITY' | translate }}</span>
+        </div>
+        <div class="stat-card price">
+          <span class="stat-value">{{avgPrice}}€</span>
+          <span class="stat-label">{{ 'PRODUCT.AVG_PRICE' | translate }}</span>
+        </div>
+      </div>
+
+      <!-- Barre de recherche -->
+      <div class="search-bar" *ngIf="!showForm">
+        <input type="text" class="search-input" [placeholder]="'PRODUCT.SEARCH' | translate"
+               (input)="onSearch($event)" [value]="searchTerm">
+        <span class="search-icon">🔍</span>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="emp-form" *ngIf="showForm">
+        <h3>{{ (isEditMode ? 'PRODUCT.EDIT' : 'PRODUCT.NEW') | translate }}</h3>
+        <form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">{{ 'PRODUCT.NAME' | translate }} *</label>
+              <input type="text" id="name" formControlName="name" class="form-input" />
+              <div class="error" *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched">
+                {{ 'PRODUCT.NAME_REQUIRED' | translate }}
+              </div>
+              <div class="error" *ngIf="duplicateError">
+                {{ 'PRODUCT.DUPLICATE_ERROR' | translate }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="price">{{ 'PRODUCT.PRICE' | translate }} (€) *</label>
+              <input type="number" id="price" formControlName="price" class="form-input" min="0" step="0.01" />
+            </div>
+            <div class="form-group">
+              <label for="category">{{ 'PRODUCT.CATEGORY' | translate }}</label>
+              <input type="text" id="category" formControlName="category" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label for="quantity">{{ 'PRODUCT.QUANTITY' | translate }} *</label>
+              <input type="number" id="quantity" formControlName="quantity" class="form-input" min="0" />
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-cancel" (click)="cancelForm()">{{ 'FORM.CANCEL' | translate }}</button>
+            <button type="submit" class="btn-submit" [disabled]="productForm.invalid">
+              {{ (isEditMode ? 'FORM.UPDATE' : 'PRODUCT.SAVE') | translate }}
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Tableau -->
+      <div class="table-wrap" *ngIf="!showForm">
+        <table class="emp-table">
+          <thead>
+            <tr>
+              <th>{{ 'PRODUCT.ID' | translate }}</th>
+              <th>{{ 'PRODUCT.NAME' | translate }}</th>
+              <th>{{ 'PRODUCT.PRICE' | translate }}</th>
+              <th>{{ 'PRODUCT.CATEGORY' | translate }}</th>
+              <th>{{ 'PRODUCT.QUANTITY' | translate }}</th>
+              <th>{{ 'PRODUCT.ACTIONS' | translate }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of filteredProducts" class="emp-row"
+                [class.low-stock]="product.quantity < 5">
+              <td [attr.data-label]="'PRODUCT.ID' | translate">{{ product.id }}</td>
+              <td [attr.data-label]="'PRODUCT.NAME' | translate">{{ product.name }}</td>
+              <td [attr.data-label]="'PRODUCT.PRICE' | translate">{{ product.price | number:'1.2-2' }} €</td>
+              <td [attr.data-label]="'PRODUCT.CATEGORY' | translate">{{ product.category || '-' }}</td>
+              <td [attr.data-label]="'PRODUCT.QUANTITY' | translate">
+                <span class="qty-badge" [class.warning]="product.quantity < 5">
+                  {{ product.quantity }}
+                </span>
+              </td>
+              <td [attr.data-label]="'PRODUCT.ACTIONS' | translate">
+                <button class="btn-edit" (click)="editProduct(product)">{{ 'PRODUCT.EDIT_BTN' | translate }}</button>
+                <button class="btn-del" (click)="deleteProduct(product.id)">{{ 'PRODUCT.DELETE' | translate }}</button>
+              </td>
+            </tr>
+            <tr *ngIf="filteredProducts.length === 0">
+              <td colspan="6" class="no-data">{{ 'PRODUCT.NO_DATA' | translate }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+</div>

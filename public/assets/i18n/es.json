@@ -1,0 +1,137 @@
+{
+  "APP": {
+    "TITLE": "Gestión de Empleados"
+  },
+  "LOGIN": {
+    "SUBTITLE": "Inicia sesión en tu cuenta",
+    "USERNAME": "Nombre de usuario",
+    "PASSWORD": "Contraseña",
+    "SUBMIT": "Iniciar sesión",
+    "ERROR": "Credenciales incorrectas, por favor inténtalo de nuevo."
+  },
+  "NAV": {
+    "LOGOUT": "Cerrar sesión"
+  },
+  "DASHBOARD": {
+    "WELCOME": "Bienvenido",
+    "SUBTITLE": "Panel de administración",
+    "TOTAL": "Total de empleados",
+    "TOTAL_EMPLOYEES": "Total de empleados",
+    "ACTIVE": "Empleados activos",
+    "INACTIVE": "Empleados inactivos",
+    "DEPARTMENTS": "Número de departamentos"
+  },
+  "SIDEBAR": {
+    "DASHBOARD": "Panel de control",
+    "EMPLOYEES": "Lista de empleados",
+    "MY_PROFILE": "Mi perfil",
+    "LOGOUT": "Cerrar sesión",
+    "PRODUCTS": "Productos",
+    "DEPARTMENTS": "Departamentos"
+  },
+  "NAVBAR": {
+    "LOGOUT": "Cerrar sesión",
+    "LANGUAGE": "Idioma"
+  },
+  "EMPLOYEE": {
+    "LIST_TITLE": "Lista de empleados",
+    "RESULTS": "resultado(s) encontrado(s)",
+    "SEARCH": "Buscar un empleado...",
+    "ADD": "Añadir un empleado",
+    "EDIT": "Editar empleado",
+    "NAME": "Nombre completo",
+    "LASTNAME": "Apellido",
+    "FIRSTNAME": "Nombre",
+    "EMAIL": "Dirección de correo",
+    "PHONE": "Número de teléfono",
+    "POST": "Puesto de trabajo",
+    "DEPT": "Departamento",
+    "HIRE_DATE": "Fecha de contratación",
+    "SALARY": "Salario mensual",
+    "STATUS": "Estado",
+    "ACTIONS": "Acciones disponibles",
+    "ACTIVE": "Activo",
+    "INACTIVE": "Inactivo",
+    "NO_DATA": "No se encontraron empleados."
+  },
+  "FORM": {
+    "SELECT": "Seleccionar una opción",
+    "CANCEL": "Cancelar",
+    "CREATE": "Crear empleado",
+    "UPDATE": "Actualizar"
+  },
+  "PRODUCT": {
+    "TITLE": "Gestión de Productos",
+    "SUBTITLE": "Gestiona tu catálogo de productos",
+    "ADD": "+ Nuevo producto",
+    "TOTAL": "Productos totales",
+    "LOW_STOCK": "Stock < 5",
+    "TOTAL_QUANTITY": "Cantidad total",
+    "AVG_PRICE": "Precio medio",
+    "SEARCH": "Buscar un producto...",
+    "EDIT": "Editar producto",
+    "NEW": "Nuevo producto",
+    "NAME": "Nombre",
+    "NAME_REQUIRED": "El nombre es obligatorio",
+    "PRICE": "Precio",
+    "CATEGORY": "Categoría",
+    "QUANTITY": "Cantidad",
+    "SAVE": "Guardar",
+    "ID": "ID",
+    "ACTIONS": "Acciones",
+    "EDIT_BTN": "Editar",
+    "DELETE": "Eliminar",
+    "CONFIRM_DELETE": "¿Eliminar este producto?",
+    "DUPLICATE_ERROR": "Ya existe un producto con este nombre",
+    "NO_DATA": "No se encontraron productos",
+    "LOW_STOCK_ALERT_TITLE": "⚠️ Productos con stock bajo (< 5 unidades)",
+    "NO_LOW_STOCK": "✅ No hay productos por debajo del umbral.",
+    "INVENTORY": "Inventario",
+    "MONTHLY_INVENTORY": "📊 Inventario mensual",
+    "PRODUCT": "Producto",
+    "ALL_PRODUCTS": "Todos los productos",
+    "UNIT": "unidad(es)"
+  },
+  "DEPARTMENT": {
+    "TITLE": "Gestión de Departamentos",
+    "SUBTITLE": "Gestiona los departamentos de tu organización",
+    "ADD": "+ Nuevo departamento",
+    "TOTAL": "Departamentos totales",
+    "ACTIVE": "Activo",
+    "INACTIVE": "Inactivo",
+    "SEARCH": "Buscar un departamento...",
+    "EDIT": "Editar departamento",
+    "NEW": "Nuevo departamento",
+    "NAME": "Nombre",
+    "NAME_REQUIRED": "El nombre es obligatorio",
+    "DESCRIPTION": "Descripción",
+    "ACTIVE_LABEL": "Activo",
+    "SAVE": "Guardar",
+    "ID": "ID",
+    "STATUS": "Estado",
+    "ACTIONS": "Acciones",
+    "EDIT_BTN": "Editar",
+    "DELETE": "Eliminar",
+    "CONFIRM_DELETE": "¿Eliminar este departamento?",
+    "DUPLICATE_ERROR": "Ya existe un departamento con este nombre",
+    "NO_DATA": "No se encontraron departamentos"
+  },
+  "COMMON": {
+    "CLOSE": "Cerrar",
+    "YEAR": "Año"
+  },
+  "MONTH": {
+    "JAN": "Ene",
+    "FEB": "Feb",
+    "MAR": "Mar",
+    "APR": "Abr",
+    "MAY": "May",
+    "JUN": "Jun",
+    "JUL": "Jul",
+    "AUG": "Ago",
+    "SEP": "Sep",
+    "OCT": "Oct",
+    "NOV": "Nov",
+    "DEC": "Dic"
+  }
+}

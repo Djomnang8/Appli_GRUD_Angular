@@ -1,0 +1,137 @@
+{
+  "APP": {
+    "TITLE": "Gestão de Funcionários"
+  },
+  "LOGIN": {
+    "SUBTITLE": "Faça login na sua conta",
+    "USERNAME": "Nome de utilizador",
+    "PASSWORD": "Palavra-passe",
+    "SUBMIT": "Entrar",
+    "ERROR": "Credenciais inválidas, por favor tente novamente."
+  },
+  "NAV": {
+    "LOGOUT": "Terminar sessão"
+  },
+  "DASHBOARD": {
+    "WELCOME": "Bem-vindo",
+    "SUBTITLE": "Painel do administrador",
+    "TOTAL": "Total de funcionários",
+    "TOTAL_EMPLOYEES": "Total de funcionários",
+    "ACTIVE": "Funcionários ativos",
+    "INACTIVE": "Funcionários inativos",
+    "DEPARTMENTS": "Número de departamentos"
+  },
+  "SIDEBAR": {
+    "DASHBOARD": "Painel de controlo",
+    "EMPLOYEES": "Lista de funcionários",
+    "MY_PROFILE": "O meu perfil",
+    "LOGOUT": "Terminar sessão",
+    "PRODUCTS": "Produtos",
+    "DEPARTMENTS": "Departamentos"
+  },
+  "NAVBAR": {
+    "LOGOUT": "Terminar sessão",
+    "LANGUAGE": "Idioma"
+  },
+  "EMPLOYEE": {
+    "LIST_TITLE": "Lista de funcionários",
+    "RESULTS": "resultado(s) encontrado(s)",
+    "SEARCH": "Pesquisar um funcionário...",
+    "ADD": "Adicionar um funcionário",
+    "EDIT": "Editar funcionário",
+    "NAME": "Nome completo",
+    "LASTNAME": "Apelido",
+    "FIRSTNAME": "Nome próprio",
+    "EMAIL": "Endereço de email",
+    "PHONE": "Número de telefone",
+    "POST": "Cargo profissional",
+    "DEPT": "Departamento",
+    "HIRE_DATE": "Data de contratação",
+    "SALARY": "Salário mensal",
+    "STATUS": "Estado",
+    "ACTIONS": "Ações disponíveis",
+    "ACTIVE": "Ativo",
+    "INACTIVE": "Inativo",
+    "NO_DATA": "Nenhum funcionário encontrado."
+  },
+  "FORM": {
+    "SELECT": "Selecionar uma opção",
+    "CANCEL": "Cancelar",
+    "CREATE": "Criar funcionário",
+    "UPDATE": "Atualizar"
+  },
+  "PRODUCT": {
+    "TITLE": "Gestão de Produtos",
+    "SUBTITLE": "Gerencie seu catálogo de produtos",
+    "ADD": "+ Novo produto",
+    "TOTAL": "Total de produtos",
+    "LOW_STOCK": "Stock < 5",
+    "TOTAL_QUANTITY": "Quantidade total",
+    "AVG_PRICE": "Preço médio",
+    "SEARCH": "Pesquisar um produto...",
+    "EDIT": "Editar produto",
+    "NEW": "Novo produto",
+    "NAME": "Nome",
+    "NAME_REQUIRED": "O nome é obrigatório",
+    "PRICE": "Preço",
+    "CATEGORY": "Categoria",
+    "QUANTITY": "Quantidade",
+    "SAVE": "Salvar",
+    "ID": "ID",
+    "ACTIONS": "Ações",
+    "EDIT_BTN": "Editar",
+    "DELETE": "Excluir",
+    "CONFIRM_DELETE": "Excluir este produto?",
+    "DUPLICATE_ERROR": "Já existe um produto com este nome",
+    "NO_DATA": "Nenhum produto encontrado",
+    "LOW_STOCK_ALERT_TITLE": "⚠️ Produtos com stock baixo (< 5 unidades)",
+    "NO_LOW_STOCK": "✅ Nenhum produto abaixo do limite.",
+    "INVENTORY": "Inventário",
+    "MONTHLY_INVENTORY": "📊 Inventário mensal",
+    "PRODUCT": "Produto",
+    "ALL_PRODUCTS": "Todos os produtos",
+    "UNIT": "unidade(s)"
+  },
+  "DEPARTMENT": {
+    "TITLE": "Gestão de Departamentos",
+    "SUBTITLE": "Gerencie os departamentos da sua organização",
+    "ADD": "+ Novo departamento",
+    "TOTAL": "Total de departamentos",
+    "ACTIVE": "Ativos",
+    "INACTIVE": "Inativos",
+    "SEARCH": "Pesquisar um departamento...",
+    "EDIT": "Editar departamento",
+    "NEW": "Novo departamento",
+    "NAME": "Nome",
+    "NAME_REQUIRED": "O nome é obrigatório",
+    "DESCRIPTION": "Descrição",
+    "ACTIVE_LABEL": "Ativo",
+    "SAVE": "Salvar",
+    "ID": "ID",
+    "STATUS": "Estado",
+    "ACTIONS": "Ações",
+    "EDIT_BTN": "Editar",
+    "DELETE": "Excluir",
+    "CONFIRM_DELETE": "Excluir este departamento?",
+    "DUPLICATE_ERROR": "Já existe um departamento com este nome",
+    "NO_DATA": "Nenhum departamento encontrado"
+  },
+  "COMMON": {
+    "CLOSE": "Fechar",
+    "YEAR": "Ano"
+  },
+  "MONTH": {
+    "JAN": "Jan",
+    "FEB": "Fev",
+    "MAR": "Mar",
+    "APR": "Abr",
+    "MAY": "Mai",
+    "JUN": "Jun",
+    "JUL": "Jul",
+    "AUG": "Ago",
+    "SEP": "Set",
+    "OCT": "Out",
+    "NOV": "Nov",
+    "DEC": "Dez"
+  }
+}

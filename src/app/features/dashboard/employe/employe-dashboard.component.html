@@ -1,0 +1,23 @@
+<div class="layout">
+  <app-navbar></app-navbar>
+  <div class="content-wrap">
+    <app-sidebar></app-sidebar>
+    <main class="main">
+      <h2>{{ 'DASHBOARD.WELCOME' | translate }}, {{auth.getCurrentUser()?.prenom}}</h2>
+      <div class="profile-card" *ngIf="profile">
+        <div class="profile-avatar">{{profile.prenom[0]}}{{profile.nom[0]}}</div>
+        <div class="profile-info">
+          <h3>{{profile.prenom}} {{profile.nom}}</h3>
+          <p>{{profile.poste}}</p>
+          <p>{{profile.email}}</p>
+          <p>{{profile.telephone}}</p>
+          <p>{{profile.departement}}</p>
+          <p>{{profile.dateEmbauche}}</p>
+          <span class="status-badge" [class.actif]="profile.actif">
+            {{ profile.actif ? ('EMPLOYEE.ACTIVE'|translate) : ('EMPLOYEE.INACTIVE'|translate) }}
+          </span>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="layout">
+  <app-navbar></app-navbar>
+  <div class="content-wrap">
+    <app-sidebar></app-sidebar>
+    <main class="main">
+      <h2>{{ isEdit ? ('EMPLOYEE.EDIT'|translate) : ('EMPLOYEE.ADD'|translate) }}</h2>
+      <div class="success-msg" *ngIf="successMsg">{{successMsg}}</div>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="emp-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>{{ 'EMPLOYEE.LASTNAME' | translate }} *</label>
+            <input formControlName="nom" type="text" class="form-input">
+          </div>
+          <div class="form-group">
+            <label>{{ 'EMPLOYEE.FIRSTNAME' | translate }} *</label>
+            <input formControlName="prenom" type="text" class="form-input">
+          </div>
+          <div class="form-group">
+            <label>{{ 'EMPLOYEE.EMAIL' | translate }} *</label>
+            <input formControlName="email" type="email" class="form-input">
+          </div>
+          <div class="form-group">
+            <label>{{ 'EMPLOYEE.PHONE' | translate }} *</label>
+            <input formControlName="telephone" type="tel" class="form-input">
+          </div>
+          <div class="form-group">
+            <label>{{ 'EMPLOYEE.POST' | translate }} *</label>
+            <input formControlName="poste" type="text" class="form-input">
+          </div>
+          <div class="form-group">
+            <label>{{ 'EMPLOYEE.DEPT' | translate }} *</label>
+            <select formControlName="departement" class="form-input">
+              <option value="">-- {{ 'FORM.SELECT' | translate }} --</option>
+              <option *ngFor="let d of departments" [value]="d">{{d}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>{{ 'EMPLOYEE.HIRE_DATE' | translate }} *</label>
+            <input formControlName="dateEmbauche" type="date" class="form-input">
+          </div>
+          <div class="form-group">
+            <label>{{ 'EMPLOYEE.SALARY' | translate }} (EUR) *</label>
+            <input formControlName="salaire" type="number" class="form-input">
+          </div>
+          <div class="form-group">
+            <label>{{ 'EMPLOYEE.STATUS' | translate }}</label>
+            <label class="toggle">
+              <input type="checkbox" formControlName="actif">
+              <span class="slider"></span>
+              <span>{{ form.get('actif')?.value ? ('EMPLOYEE.ACTIVE'|translate) : ('EMPLOYEE.INACTIVE'|translate) }}</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-cancel" (click)="cancel()">{{ 'FORM.CANCEL' | translate }}</button>
+          <button type="submit" class="btn-submit" [disabled]="form.invalid">
+            {{ isEdit ? ('FORM.UPDATE'|translate) : ('FORM.CREATE'|translate) }}
+          </button>
+        </div>
+      </form>
+    </main>
+  </div>
+</div>

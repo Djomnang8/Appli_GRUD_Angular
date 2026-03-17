@@ -1,0 +1,113 @@
+<div class="layout">
+  <app-navbar></app-navbar>
+  <div class="content-wrap">
+    <app-sidebar></app-sidebar>
+    <main class="main">
+
+      <!-- En-tête -->
+      <div class="page-header">
+        <div>
+          <h2>{{ 'DEPARTMENT.TITLE' | translate }}</h2>
+          <p>{{ 'DEPARTMENT.SUBTITLE' | translate }}</p>
+        </div>
+        <button class="btn-add" (click)="toggleForm()" *ngIf="!showForm">
+          {{ 'DEPARTMENT.ADD' | translate }}
+        </button>
+      </div>
+
+      <!-- Stats mini-dashboard -->
+      <div class="stats-grid" *ngIf="!showForm">
+        <div class="stat-card total">
+          <span class="stat-value">{{totalDepts}}</span>
+          <span class="stat-label">{{ 'DEPARTMENT.TOTAL' | translate }}</span>
+        </div>
+        <div class="stat-card active">
+          <span class="stat-value">{{activeDepts}}</span>
+          <span class="stat-label">{{ 'DEPARTMENT.ACTIVE' | translate }}</span>
+        </div>
+        <div class="stat-card inactive">
+          <span class="stat-value">{{inactiveDepts}}</span>
+          <span class="stat-label">{{ 'DEPARTMENT.INACTIVE' | translate }}</span>
+        </div>
+      </div>
+
+      <!-- Barre de recherche -->
+      <div class="search-bar" *ngIf="!showForm">
+        <input type="text" class="search-input" [placeholder]="'DEPARTMENT.SEARCH' | translate"
+               (input)="onSearch($event)" [value]="searchTerm">
+        <span class="search-icon">🔍</span>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="emp-form" *ngIf="showForm">
+        <h3>{{ (isEditMode ? 'DEPARTMENT.EDIT' : 'DEPARTMENT.NEW') | translate }}</h3>
+        <form [formGroup]="departmentForm" (ngSubmit)="saveDepartment()">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">{{ 'DEPARTMENT.NAME' | translate }} *</label>
+              <input type="text" id="name" formControlName="name" class="form-input" />
+              <div class="error" *ngIf="departmentForm.get('name')?.invalid && departmentForm.get('name')?.touched">
+                {{ 'DEPARTMENT.NAME_REQUIRED' | translate }}
+              </div>
+              <div class="error" *ngIf="duplicateError">
+                {{ 'DEPARTMENT.DUPLICATE_ERROR' | translate }}
+              </div>
+            </div>
+            <div class="form-group full">
+              <label for="description">{{ 'DEPARTMENT.DESCRIPTION' | translate }}</label>
+              <textarea id="description" formControlName="description" class="form-input" rows="3"></textarea>
+            </div>
+            <div class="form-group toggle-group">
+              <label class="toggle-label">
+                <input type="checkbox" formControlName="active" class="toggle-input" />
+                <span class="toggle-track"></span>
+                <span class="toggle-text">{{ 'DEPARTMENT.ACTIVE_LABEL' | translate }}</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-cancel" (click)="cancelForm()">{{ 'FORM.CANCEL' | translate }}</button>
+            <button type="submit" class="btn-submit" [disabled]="departmentForm.invalid">
+              {{ (isEditMode ? 'FORM.UPDATE' : 'DEPARTMENT.SAVE') | translate }}
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Tableau -->
+      <div class="table-wrap" *ngIf="!showForm">
+        <table class="emp-table">
+          <thead>
+            <tr>
+              <th>{{ 'DEPARTMENT.ID' | translate }}</th>
+              <th>{{ 'DEPARTMENT.NAME' | translate }}</th>
+              <th>{{ 'DEPARTMENT.DESCRIPTION' | translate }}</th>
+              <th>{{ 'DEPARTMENT.STATUS' | translate }}</th>
+              <th>{{ 'DEPARTMENT.ACTIONS' | translate }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let dept of filteredDepartments" class="emp-row">
+              <td [attr.data-label]="'DEPARTMENT.ID' | translate">{{ dept.id }}</td>
+              <td [attr.data-label]="'DEPARTMENT.NAME' | translate">{{ dept.name }}</td>
+              <td [attr.data-label]="'DEPARTMENT.DESCRIPTION' | translate">{{ dept.description || '-' }}</td>
+              <td [attr.data-label]="'DEPARTMENT.STATUS' | translate">
+                <span class="status-badge" [class.actif]="dept.active" [class.inactif]="!dept.active">
+                  {{ (dept.active ? 'DEPARTMENT.ACTIVE' : 'DEPARTMENT.INACTIVE') | translate }}
+                </span>
+              </td>
+              <td [attr.data-label]="'DEPARTMENT.ACTIONS' | translate">
+                <button class="btn-edit" (click)="editDepartment(dept)">{{ 'DEPARTMENT.EDIT_BTN' | translate }}</button>
+                <button class="btn-del" (click)="deleteDepartment(dept.id)">{{ 'DEPARTMENT.DELETE' | translate }}</button>
+              </td>
+            </tr>
+            <tr *ngIf="filteredDepartments.length === 0">
+              <td colspan="5" class="no-data">{{ 'DEPARTMENT.NO_DATA' | translate }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+</div>

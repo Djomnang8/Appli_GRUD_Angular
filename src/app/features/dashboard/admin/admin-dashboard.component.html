@@ -1,0 +1,88 @@
+<div class="layout">
+  <app-navbar></app-navbar>
+  <div class="content-wrap">
+    <app-sidebar></app-sidebar>
+    <main class="main">
+
+      <div class="page-header">
+        <h2>{{ 'DASHBOARD.WELCOME' | translate }}, {{auth.getCurrentUser()?.prenom}}</h2>
+        <p>{{ 'DASHBOARD.SUBTITLE' | translate }}</p>
+      </div>
+
+      <!-- Statistiques -->
+      <div class="stats-grid">
+        <div class="stat-card total">
+          <span class="stat-value">{{totalEmployees}}</span>
+          <span class="stat-label">{{ 'DASHBOARD.TOTAL_EMPLOYEES' | translate }}</span>
+        </div>
+        <div class="stat-card stock-alert" (click)="showStockAlert()" style="cursor:pointer;">
+          <span class="stat-value">{{lowStockCount}}</span>
+          <span class="stat-label">{{ 'PRODUCT.LOW_STOCK' | translate }}</span>
+        </div>
+        <div class="stat-card inventory" (click)="showInventory()" style="cursor:pointer;">
+          <span class="stat-value">{{totalQuantity}}</span>
+          <span class="stat-label">{{ 'PRODUCT.INVENTORY' | translate }}</span>
+        </div>
+        <div class="stat-card depts">
+          <span class="stat-value">{{uniqueDepartmentsCount}}</span>
+          <span class="stat-label">{{ 'DASHBOARD.DEPARTMENTS' | translate }}</span>
+        </div>
+        <div class="stat-card products">
+          <span class="stat-value">{{totalProducts}}</span>
+          <span class="stat-label">{{ 'SIDEBAR.PRODUCTS' | translate }}</span>
+        </div>
+      </div>
+
+      <!-- Alertes Stock < 5 -->
+      <div class="alert-section" *ngIf="showStockAlertData">
+        <div class="section-header">
+          <h3>{{ 'PRODUCT.LOW_STOCK_ALERT_TITLE' | translate }}</h3>
+          <button class="btn-close" (click)="showStockAlertData = false">{{ 'COMMON.CLOSE' | translate }}</button>
+        </div>
+        <ul class="alert-list">
+          <li *ngFor="let p of lowStockProducts">
+            <span class="prod-name">{{ p.name }}</span>
+            <span class="prod-qty">{{ p.quantity }} {{ 'PRODUCT.UNIT' | translate }}</span>
+          </li>
+          <li *ngIf="lowStockProducts.length === 0" class="no-alert">
+            {{ 'PRODUCT.NO_LOW_STOCK' | translate }}
+          </li>
+        </ul>
+      </div>
+
+      <!-- Inventaire – histogramme -->
+      <div class="inventory-section" *ngIf="showInventoryData">
+        <div class="section-header">
+          <h3>{{ 'PRODUCT.MONTHLY_INVENTORY' | translate }}</h3>
+          <button class="btn-close" (click)="showInventoryData = false">{{ 'COMMON.CLOSE' | translate }}</button>
+        </div>
+        <div class="chart-filters">
+          <div class="filter-group">
+            <label>{{ 'COMMON.YEAR' | translate }}</label>
+            <select (change)="onYearChange($event)">
+              <option *ngFor="let y of availableYears" [value]="y" [selected]="y === inventoryYear">{{y}}</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>{{ 'PRODUCT.PRODUCT' | translate }}</label>
+            <select (change)="onProductChange($event)">
+              <option value="all">{{ 'PRODUCT.ALL_PRODUCTS' | translate }}</option>
+              <option *ngFor="let p of availableProducts" [value]="p.id">{{p.name}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <canvas #chartCanvas class="bar-chart"></canvas>
+        </div>
+      </div>
+
+      <div class="quick-actions">
+        <a routerLink="/employees" class="action-card">{{ 'SIDEBAR.EMPLOYEES' | translate }}</a>
+        <a routerLink="/employees/new" class="action-card accent">{{ 'EMPLOYEE.ADD' | translate }}</a>
+        <a routerLink="/products" class="action-card purple">{{ 'SIDEBAR.PRODUCTS' | translate }}</a>
+        <a routerLink="/departments" class="action-card teal">{{ 'SIDEBAR.DEPARTMENTS' | translate }}</a>
+      </div>
+
+    </main>
+  </div>
+</div>

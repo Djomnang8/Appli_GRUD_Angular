@@ -1,0 +1,137 @@
+{
+  "APP": {
+    "TITLE": "Mitarbeiterverwaltung"
+  },
+  "LOGIN": {
+    "SUBTITLE": "Melden Sie sich in Ihrem Konto an",
+    "USERNAME": "Benutzername",
+    "PASSWORD": "Passwort",
+    "SUBMIT": "Anmelden",
+    "ERROR": "Ungültige Anmeldedaten, bitte versuchen Sie es erneut."
+  },
+  "NAV": {
+    "LOGOUT": "Abmelden"
+  },
+  "DASHBOARD": {
+    "WELCOME": "Willkommen",
+    "SUBTITLE": "Administrator-Dashboard",
+    "TOTAL": "Mitarbeiter insgesamt",
+    "TOTAL_EMPLOYEES": "Mitarbeiter insgesamt",
+    "ACTIVE": "Aktive Mitarbeiter",
+    "INACTIVE": "Inaktive Mitarbeiter",
+    "DEPARTMENTS": "Anzahl der Abteilungen"
+  },
+  "SIDEBAR": {
+    "DASHBOARD": "Dashboard",
+    "EMPLOYEES": "Mitarbeiterliste",
+    "MY_PROFILE": "Mein Profil",
+    "LOGOUT": "Abmelden",
+    "PRODUCTS": "Produkte",
+    "DEPARTMENTS": "Abteilungen"
+  },
+  "NAVBAR": {
+    "LOGOUT": "Abmelden",
+    "LANGUAGE": "Sprache"
+  },
+  "EMPLOYEE": {
+    "LIST_TITLE": "Mitarbeiterliste",
+    "RESULTS": "Ergebnis(se) gefunden",
+    "SEARCH": "Mitarbeiter suchen...",
+    "ADD": "Mitarbeiter hinzufügen",
+    "EDIT": "Mitarbeiter bearbeiten",
+    "NAME": "Vollständiger Name",
+    "LASTNAME": "Nachname",
+    "FIRSTNAME": "Vorname",
+    "EMAIL": "E-Mail-Adresse",
+    "PHONE": "Telefonnummer",
+    "POST": "Berufsbezeichnung",
+    "DEPT": "Abteilung",
+    "HIRE_DATE": "Einstellungsdatum",
+    "SALARY": "Monatliches Gehalt",
+    "STATUS": "Status",
+    "ACTIONS": "Verfügbare Aktionen",
+    "ACTIVE": "Aktiv",
+    "INACTIVE": "Inaktiv",
+    "NO_DATA": "Keine Mitarbeiter gefunden."
+  },
+  "FORM": {
+    "SELECT": "Option auswählen",
+    "CANCEL": "Abbrechen",
+    "CREATE": "Mitarbeiter erstellen",
+    "UPDATE": "Aktualisieren"
+  },
+  "PRODUCT": {
+    "TITLE": "Produktverwaltung",
+    "SUBTITLE": "Verwalten Sie Ihren Produktkatalog",
+    "ADD": "+ Neues Produkt",
+    "TOTAL": "Produkte insgesamt",
+    "LOW_STOCK": "Lagerbestand < 5",
+    "TOTAL_QUANTITY": "Gesamtmenge",
+    "AVG_PRICE": "Durchschnittspreis",
+    "SEARCH": "Produkt suchen...",
+    "EDIT": "Produkt bearbeiten",
+    "NEW": "Neues Produkt",
+    "NAME": "Name",
+    "NAME_REQUIRED": "Name ist erforderlich",
+    "PRICE": "Preis",
+    "CATEGORY": "Kategorie",
+    "QUANTITY": "Menge",
+    "SAVE": "Speichern",
+    "ID": "ID",
+    "ACTIONS": "Aktionen",
+    "EDIT_BTN": "Bearbeiten",
+    "DELETE": "Löschen",
+    "CONFIRM_DELETE": "Dieses Produkt löschen?",
+    "DUPLICATE_ERROR": "Ein Produkt mit diesem Namen existiert bereits",
+    "NO_DATA": "Keine Produkte gefunden",
+    "LOW_STOCK_ALERT_TITLE": "⚠️ Produkte mit niedrigem Bestand (< 5 Einheiten)",
+    "NO_LOW_STOCK": "✅ Keine Produkte unter dem Schwellenwert.",
+    "INVENTORY": "Inventar",
+    "MONTHLY_INVENTORY": "📊 Monatliches Inventar",
+    "PRODUCT": "Produkt",
+    "ALL_PRODUCTS": "Alle Produkte",
+    "UNIT": "Einheit(en)"
+  },
+  "DEPARTMENT": {
+    "TITLE": "Abteilungsverwaltung",
+    "SUBTITLE": "Verwalten Sie die Abteilungen Ihrer Organisation",
+    "ADD": "+ Neue Abteilung",
+    "TOTAL": "Abteilungen insgesamt",
+    "ACTIVE": "Aktiv",
+    "INACTIVE": "Inaktiv",
+    "SEARCH": "Abteilung suchen...",
+    "EDIT": "Abteilung bearbeiten",
+    "NEW": "Neue Abteilung",
+    "NAME": "Name",
+    "NAME_REQUIRED": "Name ist erforderlich",
+    "DESCRIPTION": "Beschreibung",
+    "ACTIVE_LABEL": "Aktiv",
+    "SAVE": "Speichern",
+    "ID": "ID",
+    "STATUS": "Status",
+    "ACTIONS": "Aktionen",
+    "EDIT_BTN": "Bearbeiten",
+    "DELETE": "Löschen",
+    "CONFIRM_DELETE": "Diese Abteilung löschen?",
+    "DUPLICATE_ERROR": "Eine Abteilung mit diesem Namen existiert bereits",
+    "NO_DATA": "Keine Abteilungen gefunden"
+  },
+  "COMMON": {
+    "CLOSE": "Schließen",
+    "YEAR": "Jahr"
+  },
+  "MONTH": {
+    "JAN": "Jan",
+    "FEB": "Feb",
+    "MAR": "Mär",
+    "APR": "Apr",
+    "MAY": "Mai",
+    "JUN": "Jun",
+    "JUL": "Jul",
+    "AUG": "Aug",
+    "SEP": "Sep",
+    "OCT": "Okt",
+    "NOV": "Nov",
+    "DEC": "Dez"
+  }
+}

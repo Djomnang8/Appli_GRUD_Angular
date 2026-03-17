@@ -1,0 +1,137 @@
+{
+  "APP": {
+    "TITLE": "Gestione dei Dipendenti"
+  },
+  "LOGIN": {
+    "SUBTITLE": "Accedi al tuo account",
+    "USERNAME": "Nome utente",
+    "PASSWORD": "Password",
+    "SUBMIT": "Accedi",
+    "ERROR": "Credenziali non valide, per favore riprova."
+  },
+  "NAV": {
+    "LOGOUT": "Esci"
+  },
+  "DASHBOARD": {
+    "WELCOME": "Benvenuto",
+    "SUBTITLE": "Dashboard amministratore",
+    "TOTAL": "Totale dipendenti",
+    "TOTAL_EMPLOYEES": "Totale dipendenti",
+    "ACTIVE": "Dipendenti attivi",
+    "INACTIVE": "Dipendenti inattivi",
+    "DEPARTMENTS": "Numero di reparti"
+  },
+  "SIDEBAR": {
+    "DASHBOARD": "Dashboard",
+    "EMPLOYEES": "Elenco dipendenti",
+    "MY_PROFILE": "Il mio profilo",
+    "LOGOUT": "Esci",
+    "PRODUCTS": "Prodotti",
+    "DEPARTMENTS": "Reparti"
+  },
+  "NAVBAR": {
+    "LOGOUT": "Esci",
+    "LANGUAGE": "Lingua"
+  },
+  "EMPLOYEE": {
+    "LIST_TITLE": "Elenco dei dipendenti",
+    "RESULTS": "risultato/i trovato/i",
+    "SEARCH": "Cerca un dipendente...",
+    "ADD": "Aggiungere un dipendente",
+    "EDIT": "Modificare il dipendente",
+    "NAME": "Nome completo",
+    "LASTNAME": "Cognome",
+    "FIRSTNAME": "Nome",
+    "EMAIL": "Indirizzo email",
+    "PHONE": "Numero di telefono",
+    "POST": "Posizione lavorativa",
+    "DEPT": "Reparto",
+    "HIRE_DATE": "Data di assunzione",
+    "SALARY": "Stipendio mensile",
+    "STATUS": "Stato",
+    "ACTIONS": "Azioni disponibili",
+    "ACTIVE": "Attivo",
+    "INACTIVE": "Inattivo",
+    "NO_DATA": "Nessun dipendente trovato."
+  },
+  "FORM": {
+    "SELECT": "Selezionare un'opzione",
+    "CANCEL": "Annullare",
+    "CREATE": "Creare il dipendente",
+    "UPDATE": "Aggiornare"
+  },
+  "PRODUCT": {
+    "TITLE": "Gestione dei Prodotti",
+    "SUBTITLE": "Gestisci il tuo catalogo prodotti",
+    "ADD": "+ Nuovo prodotto",
+    "TOTAL": "Totale prodotti",
+    "LOW_STOCK": "Stock < 5",
+    "TOTAL_QUANTITY": "Quantità totale",
+    "AVG_PRICE": "Prezzo medio",
+    "SEARCH": "Cerca un prodotto...",
+    "EDIT": "Modifica prodotto",
+    "NEW": "Nuovo prodotto",
+    "NAME": "Nome",
+    "NAME_REQUIRED": "Il nome è obbligatorio",
+    "PRICE": "Prezzo",
+    "CATEGORY": "Categoria",
+    "QUANTITY": "Quantità",
+    "SAVE": "Salva",
+    "ID": "ID",
+    "ACTIONS": "Azioni",
+    "EDIT_BTN": "Modifica",
+    "DELETE": "Elimina",
+    "CONFIRM_DELETE": "Eliminare questo prodotto?",
+    "DUPLICATE_ERROR": "Esiste già un prodotto con questo nome",
+    "NO_DATA": "Nessun prodotto trovato",
+    "LOW_STOCK_ALERT_TITLE": "⚠️ Prodotti con scorte basse (< 5 unità)",
+    "NO_LOW_STOCK": "✅ Nessun prodotto sotto la soglia.",
+    "INVENTORY": "Inventario",
+    "MONTHLY_INVENTORY": "📊 Inventario mensile",
+    "PRODUCT": "Prodotto",
+    "ALL_PRODUCTS": "Tutti i prodotti",
+    "UNIT": "unità"
+  },
+  "DEPARTMENT": {
+    "TITLE": "Gestione dei Reparti",
+    "SUBTITLE": "Gestisci i reparti della tua organizzazione",
+    "ADD": "+ Nuovo reparto",
+    "TOTAL": "Totale reparti",
+    "ACTIVE": "Attivi",
+    "INACTIVE": "Inattivi",
+    "SEARCH": "Cerca un reparto...",
+    "EDIT": "Modifica reparto",
+    "NEW": "Nuovo reparto",
+    "NAME": "Nome",
+    "NAME_REQUIRED": "Il nome è obbligatorio",
+    "DESCRIPTION": "Descrizione",
+    "ACTIVE_LABEL": "Attivo",
+    "SAVE": "Salva",
+    "ID": "ID",
+    "STATUS": "Stato",
+    "ACTIONS": "Azioni",
+    "EDIT_BTN": "Modifica",
+    "DELETE": "Elimina",
+    "CONFIRM_DELETE": "Eliminare questo reparto?",
+    "DUPLICATE_ERROR": "Esiste già un reparto con questo nome",
+    "NO_DATA": "Nessun reparto trovato"
+  },
+  "COMMON": {
+    "CLOSE": "Chiudi",
+    "YEAR": "Anno"
+  },
+  "MONTH": {
+    "JAN": "Gen",
+    "FEB": "Feb",
+    "MAR": "Mar",
+    "APR": "Apr",
+    "MAY": "Mag",
+    "JUN": "Giu",
+    "JUL": "Lug",
+    "AUG": "Ago",
+    "SEP": "Set",
+    "OCT": "Ott",
+    "NOV": "Nov",
+    "DEC": "Dic"
+  }
+}

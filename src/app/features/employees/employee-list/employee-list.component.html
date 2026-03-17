@@ -1,0 +1,49 @@
+<div class="layout">
+  <app-navbar></app-navbar>
+  <div class="content-wrap">
+    <app-sidebar></app-sidebar>
+    <main class="main">
+      <div class="page-header">
+        <div>
+          <h2>{{ 'EMPLOYEE.LIST_TITLE' | translate }}</h2>
+          <p>{{filtered.length}} {{ 'EMPLOYEE.RESULTS' | translate }}</p>
+        </div>
+        <button class="btn-add" (click)="add()">{{ 'EMPLOYEE.ADD' | translate }}</button>
+      </div>
+      <div class="search-bar">
+        <input [(ngModel)]="search" (ngModelChange)="applyFilter()"
+          [placeholder]="'EMPLOYEE.SEARCH' | translate" class="search-input">
+      </div>
+      <div class="table-wrap">
+        <table class="emp-table">
+          <thead><tr>
+            <th>{{ 'EMPLOYEE.NAME' | translate }}</th>
+            <th>{{ 'EMPLOYEE.POST' | translate }}</th>
+            <th>{{ 'EMPLOYEE.DEPT' | translate }}</th>
+            <th>{{ 'EMPLOYEE.EMAIL' | translate }}</th>
+            <th>{{ 'EMPLOYEE.SALARY' | translate }}</th>
+            <th>{{ 'EMPLOYEE.STATUS' | translate }}</th>
+            <th>{{ 'EMPLOYEE.ACTIONS' | translate }}</th>
+          </tr></thead>
+          <tbody>
+            <tr *ngFor="let emp of filtered" class="emp-row">
+              <td>{{emp.prenom}} {{emp.nom}}</td>
+              <td>{{emp.poste}}</td>
+              <td>{{emp.departement}}</td>
+              <td>{{emp.email}}</td>
+              <td>{{emp.salaire}}EUR</td>
+              <td>{{ emp.actif ? ('EMPLOYEE.ACTIVE'|translate) : ('EMPLOYEE.INACTIVE'|translate) }}</td>
+              <td>
+                <button class="btn-edit" (click)="edit(emp.id)">Editer</button>
+                <button class="btn-del" (click)="delete(emp.id)">Supprimer</button>
+              </td>
+            </tr>
+            <tr *ngIf="filtered.length===0">
+              <td colspan="7" class="no-data">{{ 'EMPLOYEE.NO_DATA' | translate }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
